@@ -13,11 +13,19 @@ var db = config.Config()
 
 func UserList(c *gin.Context){
 	var users []model.User
-	// db.Find(&users)
-	db.Raw("select * from users").Scan(&users) // 原生的sql查询
+	// db.Select("user_name").Find(&users) // 只查询数据中的user_name字段
+	// db.Where("sex=?","boy").Find(&users) // 查询sex为boy的数据
+	// db.Where("id > ?",3).Find(&users) // 查询id大于3的数据
+	// db.Raw("select * from users").Scan(&users) // 原生的sql查询
+
+	var count int
+	db.Find(&users).Count(&count)
 	c.JSON(http.StatusOK,gin.H{
 		   "message":http.StatusOK,
 		   "data":users,
+		   "attr":gin.H{
+		   	"total":count,
+		   },
 	})
 }
 
@@ -50,7 +58,7 @@ func UserUpdate(c*gin.Context){
 		})
 		return
 	}
-	// db.Model(condition).Update(data)
+	// 根据id查询数据
 	db.Model(data).Where("id=?",id).Update(data)
 	fmt.Println(data,"data")
 	c.JSON(http.StatusOK,gin.H{
