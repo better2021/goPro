@@ -1,0 +1,2 @@
+# basicGo/control
+control\user.go:5:2: imported and not used: "cloud.google.com/go/spanner"

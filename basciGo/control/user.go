@@ -2,6 +2,7 @@ package control
 
 import (
 	"basicGo/config"
+	"cloud.google.com/go/spanner"
 	"fmt"
 	"github.com/gin-gonic/gin"
 	"basicGo/model"
@@ -15,8 +16,9 @@ func UserList(c *gin.Context){
 	var users []model.User
 	// db.Select("user_name").Find(&users) // 只查询数据中的user_name字段
 	// db.Where("sex=?","boy").Find(&users) // 查询sex为boy的数据
-	// db.Where("id > ?",3).Find(&users) // 查询id大于3的数据
+	// db.Where("id > ?",3).Find(&users) // 查询id大于3的数据 或者 SELECT * FROM users WHERE id>3;
 	// db.Raw("select * from users").Scan(&users) // 原生的sql查询
+	// SELECT * FROM users WHERE sex="girl" AND id > 3  从users表中查询sex为girl并且id大于3的数据
 
 	// db.First(&users) // 获取第一条数据
 	// db.Last(&users) // 获取最后一条数据
@@ -44,6 +46,7 @@ func UserCreat(c *gin.Context){
 		return
 	}
 	db.Create(data)
+	// 原生SQL创建： INSERT INTO users VALUES(NULL,NULL,NULL,"coco",20,"gril",'xxx')
 	c.JSON(http.StatusOK,gin.H{
 		"message":http.StatusOK,
 		"data":data,
@@ -78,6 +81,7 @@ func UserDelete(c *gin.Context){
 	fmt.Println(id,"--")
 
 	db.Where("id=?",id).Delete(model.User{})
+	// 原生SQL ：DELETE FROM users WHERE id = 5 删除id为5的数据
 	c.JSON(http.StatusOK,gin.H{
 		"message":"删除成功",
 		"status":http.StatusOK,
