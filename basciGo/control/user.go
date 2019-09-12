@@ -18,8 +18,13 @@ func UserList(c *gin.Context){
 	// db.Where("id > ?",3).Find(&users) // 查询id大于3的数据
 	// db.Raw("select * from users").Scan(&users) // 原生的sql查询
 
+	// db.First(&users) // 获取第一条数据
+	// db.Last(&users) // 获取最后一条数据
+
 	var count int
-	db.Find(&users).Count(&count)
+	name := c.Query("userName")
+	//  根据名字模糊查询数据
+	db.Where("user_name LIKE ?","%" + name + "%").Find(&users).Count(&count)
 	c.JSON(http.StatusOK,gin.H{
 		   "message":http.StatusOK,
 		   "data":users,
