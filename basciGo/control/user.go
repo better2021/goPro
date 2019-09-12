@@ -68,6 +68,7 @@ func UserUpdate(c*gin.Context){
 	}
 	// 根据id查询数据
 	db.Model(data).Where("id=?",id).Update(data)
+	// UPDATE users SET sex="boy01" WHERE id = 7 查找id为7的数据把sex修改为boy01
 	fmt.Println(data,"data")
 	c.JSON(http.StatusOK,gin.H{
 		"message":"更新成功",
