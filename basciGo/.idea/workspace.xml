@@ -3,6 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="6580eacd-9638-49e4-aa7a-992fea5c6d93" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/dbConfig.go" beforeDir="false" afterPath="$PROJECT_DIR$/config/dbConfig.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/control/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/control/user.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/product.go" beforeDir="false" afterPath="$PROJECT_DIR$/model/product.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/runner-build-errors.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/runner-build.exe" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/runner-build.exe" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,6 +37,7 @@
     <property name="DefaultGoTemplateProperty" value="Go File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="ask.go.tool.to.install.GoGolangCILintTaskConsumer" value="true" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
@@ -37,6 +46,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\study\goStudy\basciGo\control" />
       <recent name="E:\study\goStudy\basciGo\basic\socket\client" />
       <recent name="E:\study\goStudy\basciGo\basic\socket\server" />
     </key>
