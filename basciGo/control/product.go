@@ -13,14 +13,20 @@ func ProductList(c *gin.Context) {
 	var count int
 	name := c.Query("productName")
 	menuId, _ := strconv.Atoi(c.Query("menuId"))
-	fmt.Println(menuId, "----")
+	// fmt.Println(menuId, "----")
+	pageNum, _ := strconv.Atoi(c.DefaultQuery("pageNum", "1"))
+	pageSize, _ := strconv.Atoi(c.DefaultQuery("pageSize", "10"))
+	fmt.Println(pageNum, pageSize, "----")
 
-	db.Where("product_name LIKE ? AND  menu_id=?", "%"+name+"%", menuId).Find(&products).Count(&count)
+	db.Model(&products).Where("product_name LIKE ? AND  menu_id=?", "%"+name+"%", menuId).Count(&count)
+	db.Offset((pageNum-1)*pageSize).Limit(pageSize).Order("created_at desc").Where("product_name LIKE ? AND  menu_id=?", "%"+name+"%", menuId).Find(&products)
+
 	c.JSON(http.StatusOK, gin.H{
 		"message": "请求成功",
 		"status":  http.StatusOK,
 		"data":    products,
 		"attr": gin.H{
+			"page":  pageNum,
 			"total": count,
 		},
 	})

@@ -1,6 +1,8 @@
 package model
 
-import "time"
+import (
+	"time"
+)
 
 type Classification struct {
 	Id   int    `gorm:"primary_key" json:"id"`
@@ -9,11 +11,11 @@ type Classification struct {
 }
 
 type Product struct {
-	Id          int    `gorm:"primary_key" json:"id"`
-	ProductName string `gorm:"not null" json:"productName"`
-	Price       int    `json:"price"`
-	Desc        string `json:"desc"`
-	MenuId      int    `gorm:"not null" json:"menuId"`
+	Id          int     `gorm:"primary_key" json:"id"`
+	ProductName string  `gorm:"not null" json:"productName"`
+	Price       float32 `json:"price"`
+	Desc        string  `json:"desc"`
+	MenuId      int     `gorm:"not null" json:"menuId"`
 	TimeModel
 }
 
