@@ -1,0 +1,2 @@
+# basicGo/basic/lesson
+lesson\four.go:12:20: multiple-value os.Getwd() in single-value context
