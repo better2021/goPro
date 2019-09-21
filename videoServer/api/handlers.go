@@ -9,3 +9,8 @@ import (
 func CreateUser(w http.ResponseWriter,r *http.Request,p httprouter.Params){
 	io.WriteString(w,"golang handler")
 }
+
+func Login(w http.ResponseWriter,r *http.Request,p httprouter.Params){
+	uname := p.ByName("username")
+	io.WriteString(w,uname)
+}
