@@ -15,10 +15,6 @@ func NewWorker(interval time.Duration,r *Runner) *Worker {
 }
 
 func (w *Worker) startWorker() {
-	for c = range w.ticker.C{
-
-	}
-
 	for {
 		select {
 			case <- w.ticker.C:
@@ -29,5 +25,8 @@ func (w *Worker) startWorker() {
 
 func Start(){
 	// Start video file cleaning
-	r := NewRunner(3,true,VideoClearDispatcher)
+	r := NewRunner(3,true,VideoClearDispatcher,VideoClearExecutor)
+	w := NewWorker(3,r)
+	go w.startWorker()
+
 }
