@@ -1,10 +1,6 @@
 package lesson
 
-import (
-	"encoding/xml"
-	"fmt"
-	"os"
-)
+import "fmt"
 
 // 人物档案
 type person struct {
@@ -13,16 +9,35 @@ type person struct {
 }
 
 func Seven(){
-	p := person{Name:"dav",Age:18}
+	//p := person{Name:"dav",Age:18}
+	//
+	//if data,err := xml.Marshal(p);err!=nil{
+	//	fmt.Println(err)
+	//	return
+	//}else {
+	//	fmt.Println(string(data))
+	//}
+	//
+	//// 使用os.Args获取简单参数
+	//fmt.Println(os.Args)
 
-	if data,err := xml.Marshal(p);err!=nil{
-		fmt.Println(err)
-		return
-	}else {
-		fmt.Println(string(data))
+	// Range 遍历
+	nums := []int{2,3,4,5,6}
+	sum:=0
+	for _,num := range nums{
+		sum += num
+	}
+	fmt.Println("sum:",sum)
+
+	for i,num := range nums{
+		if num == 3{
+			fmt.Println("index:",i)
+		}
 	}
 
-	// 使用os.Args获取简单参数
-	fmt.Println(os.Args)
+	kvs := map[string]string{"a":"apple","b":"banana"}
+	for k,v := range kvs{
+		fmt.Printf("%s->%s\n",k,v)
+	}
 
 }
