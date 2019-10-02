@@ -1,6 +1,8 @@
 package lesson
 
-import "fmt"
+import (
+	"fmt"
+)
 
 // 人物档案
 type person struct {
