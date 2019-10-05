@@ -2,8 +2,13 @@ package lesson
 
 import (
 	"fmt"
+	"io/ioutil"
 	"math"
+	"math/rand"
+	"net/url"
+	"os"
 	"sort"
+	"strings"
 )
 
 func Eight()  {
@@ -37,6 +42,43 @@ func Eight()  {
 	sort.Ints(ints)
 	fmt.Println(ints)
 
+	// rand.Intn 返回一个随机的整数 n
+	fmt.Println(rand.Intn(100))
+
+	/*
+	URL解析
+	我们将解析这个 URL 示例，它包含了一个 scheme， 认证信息，主机名，端口，路径，查询参数和片段
+	*/
+	s := "postgres://user:pass@host.com:5432/path?k=v#f"
+	u,err := url.Parse(s)
+	if err !=nil{
+		panic(err)
+	}
+
+	fmt.Println(u.Scheme)
+	fmt.Println(u.User)
+	fmt.Println(u.Host)
+	fmt.Println(u.Path)
+	fmt.Println(u.RawQuery)
+
+	// 写文件
+	fileURL,_ := os.Getwd()
+	path := strings.Replace(fileURL, "\\", "/", -1)	// 替换\\为/
+	fmt.Println(path,"--")
+	d1 := []byte("hello\ngo\n")
+	errs := ioutil.WriteFile(path + "/lesson/file/aa.txt",d1,0644)
+	check(errs)
+
+	f,err:=os.Create(path + "/lesson/file/bb.txt")
+	check(err)
+
+	defer f.Close()
+}
+
+func check(e error)  {
+	if e!=nil{
+		panic(e)
+	}
 }
 
 // 变参函数
