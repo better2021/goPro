@@ -1,4 +1,0 @@
-# basicGo/basic/lesson
-lesson\Seven.go:34:22: not enough arguments in call to math.Max
-	have ([]int...)
-	want (float64, float64)

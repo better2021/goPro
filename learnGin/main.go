@@ -3,6 +3,7 @@ package main
 import (
 	"github.com/gin-gonic/gin"
 	"net/http"
+	"strings"
 )
 
 type Login struct {
@@ -37,7 +38,7 @@ func main()  {
 
 	// form表单传值
 	r.POST("/form_post", func(c *gin.Context) {
-		message  := c.PostForm("message")
+		message  :=  strings.TrimSpace(c.PostForm("message"))
 		nick := c.DefaultPostForm("nick","feiyu")
 
 		if message==""{

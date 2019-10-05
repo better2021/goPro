@@ -9,6 +9,7 @@ func main(){
 	//lesson.Four()
 	//lesson.Five()
 	//lesson.Six()
-	lesson.Seven()
+	//lesson.Seven()
+	lesson.Eight()
 }
 
