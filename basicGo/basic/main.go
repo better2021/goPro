@@ -13,6 +13,7 @@ func main(){
 	//lesson.Eight()
 	//lesson.Nine()
 	//lesson.Ten()
-	lesson.Chan()
+	//lesson.Chan()
+	lesson.Ch()
 }
 
