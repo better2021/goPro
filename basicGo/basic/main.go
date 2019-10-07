@@ -11,6 +11,8 @@ func main(){
 	//lesson.Six()
 	//lesson.Seven()
 	//lesson.Eight()
-	lesson.Nine()
+	//lesson.Nine()
+	//lesson.Ten()
+	lesson.Chan()
 }
 
