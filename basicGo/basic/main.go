@@ -15,6 +15,7 @@ func main(){
 	//lesson.Ten()
 	//lesson.Chan()
 	//lesson.Ch()
-	lesson.Sele()
+	//lesson.Sele()
+	lesson.Inter()
 }
 
