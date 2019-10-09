@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"github.com/gin-gonic/gin"
 	"net/http"
 	"strings"
@@ -14,6 +15,7 @@ type Login struct {
 func main()  {
 	r := gin.Default()
 	r.GET("/ping", func(c *gin.Context) {
+		fmt.Println(c.Request.URL,"--")
 		agent := c.GetHeader("User-Agent")
 		c.JSON(200,gin.H{
 			"message":"pong",
@@ -61,6 +63,7 @@ func main()  {
 			})
 			return
 		}
+		fmt.Println(c.GetHeader("Token"),"--")
 
 		if json.User!="admin" || json.Password != "123"{
 			c.JSON(http.StatusUnauthorized,gin.H{
