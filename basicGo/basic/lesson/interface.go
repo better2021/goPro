@@ -1,6 +1,9 @@
 package lesson
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 /*
 接口是一种类型，一种抽象的类型
@@ -82,4 +85,13 @@ func Inter()  {
 	x = false
 	x = p2
 	fmt.Println(x)
+
+	var s = "how do you do"
+	arr := strings.Split(s," ")
+	fmt.Println(arr)
+	fmt.Println(arr[2])
+	fmt.Println(arr[2:])
+	for _,word := range arr{
+		fmt.Println(word)
+	}
 }
