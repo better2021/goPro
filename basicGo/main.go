@@ -31,5 +31,5 @@ func main() {
 		api.DELETE("/menu/:id", control.ClasstDelete)
 	}
 
-	router.Run(":80")
+	router.Run(":80") // 80为默认端口，所以调用api地址时可以不写端口号
 }
