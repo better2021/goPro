@@ -42,6 +42,9 @@ func ProductCreat(c *gin.Context) {
 		return
 	}
 
+	fmt.Println(data,"**")
+	fmt.Println(data.ProductName,data.Price,data.Desc,"--") // 获取json中的参数
+
 	db.Create(data)
 	c.JSON(http.StatusOK, gin.H{
 		"message": http.StatusOK,

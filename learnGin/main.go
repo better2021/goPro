@@ -56,16 +56,17 @@ func main()  {
 	})
 
 	r.POST("/login", func(c *gin.Context) {
-		var json Login
-		if err := c.ShouldBind(&json);err!=nil{
+		var jsons Login
+		if err := c.ShouldBind(&jsons);err!=nil{
 			c.JSON(http.StatusBadRequest,gin.H{
 				"error":err.Error(),
 			})
 			return
 		}
 		fmt.Println(c.GetHeader("Token"),"--")
+		fmt.Println(jsons,"++")
 
-		if json.User!="admin" || json.Password != "123"{
+		if jsons.User!="admin" || jsons.Password != "123"{
 			c.JSON(http.StatusUnauthorized,gin.H{
 				"message":"账号或密码错误,StatusUnauthorized",
 			})
