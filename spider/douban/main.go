@@ -7,6 +7,7 @@ import (
 	"os"
 	"regexp"
 	"strconv"
+	"strings"
 )
 
 func main()  {
@@ -29,11 +30,11 @@ func toWork(start,end int){
 }
 
 func SaveFile(inx int,filmName,filmScore,peopleNum [][]string){
-	//fileURL,_ := os.Getwd()
-	//path := strings.Replace(fileURL, "\\", "/", -1)	// 替换\\为/
-	//fmt.Println(path,"--")
-	//dirName := path + "/spider/douban" + "第" +  strconv.Itoa(inx) + "页.txt"
-	f,err := os.Create("第" +  strconv.Itoa(inx) + "页.txt")
+	fileURL,_ := os.Getwd()
+	path := strings.Replace(fileURL, "\\", "/", -1)	// 替换\\为/
+	fmt.Println(path,"--")
+	dirName := path + "/" + "第" +  strconv.Itoa(inx) + "页.txt"
+	f,err := os.Create(dirName)
 	if err != nil{
 		fmt.Println("create err",err)
 		return
@@ -41,10 +42,13 @@ func SaveFile(inx int,filmName,filmScore,peopleNum [][]string){
 	defer f.Close()
 
 	n := len(filmName)
+	fmt.Println(n,filmName[0][1],"---+---")
+	fmt.Println(filmScore)
+	fmt.Println(peopleNum)
 	// 先获取电影名称
 	f.WriteString("电影名称"+"\t\t\t"+"评分"+"\t\t"+"评分人数"+"\n")
 	for i:=0;i<n ;i++{
-		f.WriteString(filmName[i][1]+"\t\t\t"+filmScore[i][1]+"\t\t"+peopleNum[i][1]+"\n")
+		f.WriteString(filmName[i][1] + "\t\t\t" + filmScore[i][1] + "\t\t" + "\n")
 	}
 }
 
@@ -63,19 +67,19 @@ func SpiderPage(inx int)  {
 	//fmt.Println("result",result)
 
 	// 解析、编译正则表达式 -- 名称
-	ret, _ := regexp.Compile(`<img width="100" alt="(.+?)"`)
+	ret:= regexp.MustCompile(`<img width="100" alt="(.+?)"`)
 	// 提取需要信息
 	filmName := ret.FindAllStringSubmatch(result,-1)
 
 	// 解析、编译正则表达式 -- 分数
-	pattern := `<span class="rating_num" property="v:average">(?s:(*?))</span>`
-	ret2,_ := regexp.Compile(pattern)
+	pattern := `<span class="rating_num" property="v:average">(?s:(.*?))</span>`
+	ret2:= regexp.MustCompile(pattern)
 
 	// 提取需要信息
 	filmScore := ret2.FindAllStringSubmatch(result,-1)
 
 	// 解析、编译正则表达式 -- 人数
-	ret3,_ := regexp.Compile(`<span width="100" alt="">(.+?)人评价</span>`)
+	ret3 := regexp.MustCompile(`<span width="100">(.*?)人评价</span>`)
 	// 提取需要信息
 	peopleNum := ret3.FindAllStringSubmatch(result,-1)
 

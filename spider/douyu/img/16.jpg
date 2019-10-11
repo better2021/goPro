@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>提示信息 -斗鱼</title>
+<link href="https://sta-op.douyucdn.cn/common.css" rel="stylesheet" type="text/css" />
+<link href="https://sta-op.douyucdn.cn/404error.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+ <!-- 头部开始 -->
+
+   <!-- 头部结束 -->
+   <div id="main">
+       <div class="main_word">
+           <h3>你想要的还不存在！</h3>
+       </div>
+   </div>
+       <div class="foot_global">
+          <p>武汉斗鱼网络科技有限公司 版权所有 ©www.douyu.com 公司地址：湖北省武汉市东湖开发区光谷软件园F4栋8楼</p>
+       </div>
+ 
+</body>
+</html>
+
+
+
