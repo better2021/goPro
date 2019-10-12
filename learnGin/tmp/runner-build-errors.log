@@ -1,2 +1,0 @@
-# learnGin
-.\main.go:70:19: json.Unmarshal undefined (type Login has no field or method Unmarshal)

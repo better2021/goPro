@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"github.com/gin-gonic/gin"
 	"net/http"
+	"strconv"
 	"strings"
 )
 
@@ -17,10 +18,38 @@ func main()  {
 	r.GET("/ping", func(c *gin.Context) {
 		fmt.Println(c.Request.URL,"--")
 		agent := c.GetHeader("User-Agent")
+
 		c.JSON(200,gin.H{
 			"message":"pong",
 			"User-Agent":agent,
+			"path":c.Request.URL.Path,
+			"method":c.Request.Method,
 		})
+	})
+
+	// 结构体返回
+	r.GET("/getJson/:id", func(c *gin.Context) {
+		id, _ := strconv.Atoi(c.Param("id"))
+		if id == 1 {
+			c.JSON(200,map[string]interface{}{
+				"code":1,
+				"message":"ok",
+				"isHttps":false,
+			})
+		}else if id == 2{
+			resp := Login{User:"coco",Password:"123456"}
+			c.JSON(200,&resp)
+		}else {
+			c.String(401,"参数只能是1或者2")
+		}
+
+	})
+
+	// 加载静态页面
+	r.GET("/static/page", func(c *gin.Context) {
+		// 设置html目录
+		r.LoadHTMLGlob("./static/*")
+		c.HTML(http.StatusOK,"hello.html",nil)
 	})
 
 	// 路劲传参
