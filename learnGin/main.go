@@ -42,7 +42,6 @@ func main()  {
 		}else {
 			c.String(401,"参数只能是1或者2")
 		}
-
 	})
 
 	// 加载静态页面
@@ -92,6 +91,7 @@ func main()  {
 			})
 			return
 		}
+		
 		fmt.Println(c.GetHeader("Token"),"--")
 		fmt.Println(jsons,"++")
 
