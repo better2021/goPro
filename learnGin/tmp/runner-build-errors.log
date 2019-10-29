@@ -1,0 +1,3 @@
+warning: GOPATH set to GOROOT (C:\Go) has no effect
+# learnGin
+.\main.go:105:15: syntax error: unexpected newline, expecting comma or }
