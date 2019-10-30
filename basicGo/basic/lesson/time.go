@@ -1,7 +1,9 @@
 package lesson
 
 import (
+	"bytes"
 	"fmt"
+	"strconv"
 	"time"
 )
 
@@ -26,4 +28,18 @@ func Time()  {
 	fmt.Println(d.Unix())
 	fmt.Println(d.Local())
 	fmt.Println(d.Location())
+
+	fmt.Println(strconv.Atoi("123")) // 字符串转整形 string => int
+	fmt.Println(strconv.Itoa(123)) // 整形转字符串
+
+
+	 // 以xx结尾的字节,返回true或false
+	fmt.Println(bytes.HasPrefix([]byte("Gopher"),[]byte("Go")))
+	fmt.Println(bytes.HasPrefix([]byte("Gopher"),[]byte("er")))
+
+	// 以xx结尾的字节,返回true或false
+	fmt.Println(bytes.HasSuffix([]byte("Gopher"),[]byte("Go")))
+	fmt.Println(bytes.HasSuffix([]byte("Gopher"),[]byte("er")))
+
+	fmt.Println(len("12as"))
 }

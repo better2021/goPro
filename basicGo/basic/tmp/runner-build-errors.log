@@ -1,0 +1,3 @@
+warning: GOPATH set to GOROOT (C:\Go) has no effect
+# basicGo/basic/lesson
+lesson\time.go:45:25: syntax error: unexpected comma, expecting ]
