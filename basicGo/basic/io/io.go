@@ -13,7 +13,9 @@ func main()  {
 	// readByIoutil()
 	// write()
 	// writeByte()
-	writeByiutil()
+	//writeByiutil()
+
+	trun()
 }
 
 // 读文件,只能读取很短的文件
@@ -87,4 +89,34 @@ func writeByiutil(){
 		fmt.Printf("write file failed%v\n",err)
 		return
 	}
+}
+
+/*
+	裁剪一个文件到100个字节。
+ 	如果文件本来就少于100个字节，则文件中原始内容得以保留，剩余的字节以null字节填充。
+	如果文件本来超过100个字节，则超过的字节会被抛弃。
+	这样我们总是得到精确的100个字节的文件。
+	传入0则会清空文件。
+*/
+func trun(){
+	//fmt.Println(123)
+	//err := os.Truncate("./test.txt",10)
+	//if err != nil{
+	//	fmt.Println(err)
+	//}
+	//fmt.Println(err)
+
+	fileInfo,err := os.Stat("test.txt")
+	if err !=nil{
+		fmt.Println(err)
+	}
+	fmt.Println(fileInfo)
+	// 文件名称
+	fmt.Println("file name:",fileInfo.Name())
+	fmt.Println("size in bytes:",fileInfo.Size())
+	fmt.Println("permissions:",fileInfo.Mode())
+	fmt.Println("Last modified:",fileInfo.ModTime())
+	fmt.Println("is directory:",fileInfo.IsDir())
+	fmt.Println(fileInfo.Sys())
+
 }
