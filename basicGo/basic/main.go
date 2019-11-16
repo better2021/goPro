@@ -17,6 +17,7 @@ func main(){
 	//lesson.Ch()
 	//lesson.Sele()
 	//lesson.Inter()
-	lesson.Time()
+	// lesson.Time()
+	lesson.Face()
 }
 
