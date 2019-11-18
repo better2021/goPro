@@ -1,6 +1,6 @@
 package main
 
-import "basicGo/basic/lesson"
+import "basicGo/basic/study"
 
 func main(){
 	// lesson.One()
@@ -18,6 +18,10 @@ func main(){
 	//lesson.Sele()
 	//lesson.Inter()
 	// lesson.Time()
-	lesson.Face()
+	// lesson.Face()
+
+
+	// study.One()
+	study.Two()
 }
 
