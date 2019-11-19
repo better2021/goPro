@@ -21,8 +21,24 @@ func Four()  {
 		{6,nil,&root},
 	}
 	fmt.Println(nodes)
+
+	var r Retiever
+	fmt.Println(download(r))
 }
 
 func createNode(value int) *treeNode{
 	return &treeNode{value:value}
 }
+
+/*
+接口类型 interface
+*/
+
+type Retiever interface {
+	Get(url string) string
+}
+
+func download(r Retiever) string{
+	return r.Get("www.imooc.com")
+}
+
