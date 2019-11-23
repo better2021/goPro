@@ -1,0 +1,6 @@
+warning: GOPATH set to GOROOT (C:\Go) has no effect
+# blogweb_gin/controllers
+controllers\register_controller.go:26:9: undefined: models
+controllers\register_controller.go:35:13: undefined: utils
+controllers\register_controller.go:38:10: undefined: models
+controllers\register_controller.go:39:12: undefined: models
