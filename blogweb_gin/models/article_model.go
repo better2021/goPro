@@ -4,6 +4,8 @@ import (
 	"blogweb_gin/config"
 	"blogweb_gin/database"
 	"fmt"
+	"log"
+	"strconv"
 )
 
 type Article struct {
@@ -91,3 +93,85 @@ func GetArtcileRowsNum() int{
 	return artcileRowsNum
 }
 
+// 查询文章的总条数
+func QueryArticleRowNum()int{
+	row := database.QueryRowDB("select count(id) from article")
+	num := 0
+	row.Scan(&num)
+	return num
+}
+
+// 设置页数
+func SetArticleRowsNum(){
+	artcileRowsNum = QueryArticleRowNum()
+}
+
+/*
+* 查询文章-
+*/
+func QueryArticleWithId(id int) Article {
+	row := database.QueryRowDB("select id,title,tags,short,content,author,createtime from article where id =" + strconv.Itoa(id))
+	title := ""
+	tags := ""
+	short := ""
+	content := ""
+	author := ""
+	var createtime int64
+	createtime = 0
+	row.Scan(&id,&title,&tags,&short,&content,&author,&createtime)
+	art := Article{id,title,tags,short,content,author,createtime}
+	return art
+}
+
+// 修改数据
+func UpdateArticle(article Article)(int64,error){
+	// 数据库操作
+	return database.ModifyDB("update article set title=?,tags=?,short=?,content=? where id=?",
+		article.Title,article.Tags,article.Short,article.Content,article.Id)
+}
+
+// 删除文章
+func DeleteArticle(artID int) (int64,error) {
+	i,err := deleteArticleWithArtId(artID)
+	SetArticleRowsNum()
+	return i,err
+}
+
+func deleteArticleWithArtId(artID int) (int64,error){
+	return database.ModifyDB("delete from article where id=?",artID)
+}
+
+// 查询标签，返回一个字符的列表
+func QueryArticleWithParam(param string) []string{
+	rows,err := database.QueryDB(fmt.Sprintf("select %s from article",param))
+	if err != nil{
+		log.Println(err)
+	}
+	var paramList []string
+	for rows.Next(){
+		arg := ""
+		rows.Scan(&arg)
+		paramList = append(paramList,arg)
+	}
+	return paramList
+}
+
+//--------------按照标签查询--------------
+/*
+通过标签查询首页的数据
+有四种情况
+	1.左右两边有&符和其他符号
+	2.左边有&符号和其他符号，同时右边没有任何符号
+	3.右边有&符号和其他符号，同时左边没有任何符号
+	4.左右两边都没有符号
+
+通过%去匹配任意多个字符，至少是一个
+*/
+
+func QueryArticlesWithTag(tag string) ([]Article,error){
+	sql := " where tags like '%&" + tag + "&%'"
+	sql += " or tags like '%&" + tag + "'"
+	sql += " or tags like '" + tag + "&%'"
+	fmt.Println(sql)
+	return QueryArticlesWithCon(sql)
+}
