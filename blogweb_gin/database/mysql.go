@@ -4,6 +4,7 @@ import (
 	"database/sql"
 	"fmt"
 	"log"
+	_ "github.com/go-sql-driver/mysql"  // mysql驱动（必须有）
 )
 
 var db *sql.DB
@@ -30,6 +31,7 @@ func ModifyDB(sql string,arg ...interface{})(int64,error){
 		log.Println(err)
 		return 0,err
 	}
+
 	return count,nil
 }
 
@@ -81,4 +83,6 @@ func CreateTableWithAlbum()  {
 	)`
 	ModifyDB(sql)
 }
+
+
 
