@@ -55,7 +55,7 @@ limit分页查询语句，
 */
 func QueryArticleWithPage(page,num int) ([]Article,error){
 	sql := fmt.Sprintf("limit %d,%d",page*num,num)
-	return QueryUserWightCon(sql)
+	return QueryArticlesWithCon(sql)
 }
 
 func QueryArticlesWithCon(sql string) ([]Article,error) {

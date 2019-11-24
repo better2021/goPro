@@ -1,6 +1,8 @@
 package controllers
 
 import (
+	"blogweb_gin/models"
+	"blogweb_gin/utils"
 	"fmt"
 	"github.com/gin-gonic/gin"
 	"net/http"
@@ -15,7 +17,7 @@ func RegisterGet(c *gin.Context){
 }
 
 // 处理注册
- func RegsisterPost(c *gin.Context){
+ func RegisterPost(c *gin.Context){
  	// 获取表单信息
  	username := c.PostForm("username")
  	password := c.PostForm("password")

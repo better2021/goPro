@@ -4,8 +4,8 @@ import (
 	"bytes"
 	"crypto/md5"
 	"fmt"
-	"github.com/russross/blackfriday"
 	"github.com/PuerkitoBio/goquery"
+	"github.com/russross/blackfriday"
 	"github.com/sourcegraph/syntaxhighlight"
 	"html/template"
 	"time"
@@ -24,7 +24,8 @@ func SwitchTimeStampToData(timeStamp int64) string{
 }
 
 func SwitchMarkdownToHtml(content string) template.HTML{
-	markdown := blackfriday.MarkdownCommon([]byte(content))
+	// markdown := blackfriday.MarkdownCommon([]byte(content)) // v1版本
+	markdown := blackfriday.Run([]byte(content),blackfriday.WithNoExtensions()) // v2版本
 
 	// 获取到html文档
 	doc,_ := goquery.NewDocumentFromReader(bytes.NewReader(markdown))
