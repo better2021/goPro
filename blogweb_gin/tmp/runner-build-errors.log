@@ -1,0 +1,4 @@
+warning: GOPATH set to GOROOT (C:\Go) has no effect
+# blogweb_gin/controllers
+controllers\aboutme_controller.go:10:13: undefined: GetSession
+controllers\album_controller.go:11:13: undefined: GetSession
