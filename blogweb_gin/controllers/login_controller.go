@@ -20,6 +20,7 @@ func LoginPost(c *gin.Context){
 	// 获取表单信息
 	username := c.PostForm("username")
 	password := c.PostForm("password")
+
 	fmt.Println("username:",username,"password:",password)
 
 	id := models.QueryUserWithParam(username,utils.MD5(password))

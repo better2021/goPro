@@ -20,7 +20,7 @@ func InitRouter() *gin.Engine {
 
 		// 注册：
 		router.GET("/register", controllers.RegisterGet)
-		router.POST("register",controllers.RegisterPost)
+		router.POST("/register",controllers.RegisterPost)
 
 		// 登录
 		router.GET("/login",controllers.LoginGet)
