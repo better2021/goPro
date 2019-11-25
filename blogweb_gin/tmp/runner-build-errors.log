@@ -1,3 +1,0 @@
-warning: GOPATH set to GOROOT (C:\Go) has no effect
-# blogweb_gin/controllers
-controllers\home_controller.go:28:3: artList declared and not used
