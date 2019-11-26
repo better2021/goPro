@@ -21,7 +21,7 @@ func ShowArticleGet(c *gin.Context){
 	// 获取id所对应的文章信息
 	art := models.QueryArticleWithId(id)
 	// 渲染HTML
-	fmt.Println(art,"--")
+	fmt.Println(art.Content,"--")
 	c.HTML(http.StatusOK,"show_article.html",gin.H{
 		"IsLogin":islogin,
 		"Title":art.Title,
