@@ -16,6 +16,8 @@ func HomeGet(c *gin.Context){
 	// 获取session,判断用户是否登录
 	isLogin := GetSession(c)
 
+	fmt.Println(c.Request.Header.Get("Content-Type"),"-*-")
+
 	tag := c.Query("tag")
 	fmt.Println("tag:",tag)
 	page,_ := strconv.Atoi(c.Query("page"))
