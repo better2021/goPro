@@ -29,8 +29,8 @@ func UploadPost(c *gin.Context){
 		fileType = "img"
 	}
 	// 文件夹路劲
-	fileDir := fmt.Sprintf("/static/upload/%s/%d/%d/%d",fileType,now.Year(),now.Month(),now.Day())
-	// http://127.0.0.1:8081/static/upload/img/2019/11/26/1574737219-1545381052-color.png
+	fileDir := fmt.Sprintf("static/upload/%s/%d/%d/%d",fileType,now.Year(),now.Month(),now.Day())
+
 	//ModePerm是0777，这样拥有该文件夹路径的执行权限
 	err = os.MkdirAll(fileDir,os.ModePerm)
 	if err != nil{

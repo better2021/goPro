@@ -93,7 +93,6 @@ $(document).ready(function () {
                 },
                 error: function (data, status) {
                     alert("err:" + data.message + ":" + status)
-
                 }
             });
         }
@@ -164,7 +163,7 @@ $(document).ready(function () {
         //文件上传通过Formdata去储存文件的数据
         var data = new FormData()
         data.append("upload", $("#album-upload-file")[0].files[0]);
-        alert(data)
+        console.log(data)
         var urlStr = "/upload"
         $.ajax({
             url: urlStr,

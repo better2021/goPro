@@ -50,9 +50,6 @@ func InitRouter() *gin.Engine {
 			v1.GET("/delete",controllers.DeleteArticleGet)
 		}
 
-		// 显示文章内容
-		router.GET("/show/:id",controllers.ShowArticleGet)
-
 		// 标签
 		router.GET("/tags",controllers.TagsGet)
 
