@@ -28,10 +28,11 @@ func AddArticlePost(c *gin.Context) {
 	tags := c.PostForm("tags")
 	short := c.PostForm("short")
 	content := c.PostForm("content")
+	author := c.PostForm("author")
 	fmt.Sprintf("title:%s,tags:%s\n",title,tags)
 
 	// 实例化model，将它写入数据库
-	art := models.Article{0,title,tags,short,content,"战争学院",time.Now().Unix()}
+	art := models.Article{0,title,tags,short,content,author,time.Now().Unix()}
 	_,err := models.AddArticle(art)
 
 	// 返回数据给浏览器

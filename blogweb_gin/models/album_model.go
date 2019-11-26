@@ -1,6 +1,10 @@
 package models
 
-import "blogweb_gin/database"
+import (
+	"blogweb_gin/database"
+	"fmt"
+	"strings"
+)
 
 type Album struct {
 	Id int
@@ -32,6 +36,8 @@ func FindAllAlbums()([]Album,error){
 		createtime = 0
 		rows.Scan(&id,&filepath,&filename,&status,&createtime)
 		album := Album{id,filepath,filename,status,createtime}
+		fmt.Println(album.Filepath,"-+-")
+		album.Filepath = strings.Replace(album.Filepath,"\\","/",-1) // 替换字符串中的\\
 		albums = append(albums,album)
 	}
 	return albums,nil

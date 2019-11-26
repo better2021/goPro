@@ -57,7 +57,7 @@ func InitRouter() *gin.Engine {
 		router.GET("/tags",controllers.TagsGet)
 
 		// 相册
-		router.POST("/album",controllers.AlbumGet)
+		router.GET("/album",controllers.AlbumGet)
 
 		// 文件上传
 		router.POST("/upload",controllers.UploadPost)

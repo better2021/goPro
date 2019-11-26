@@ -12,7 +12,7 @@ func AboutMeGet(c *gin.Context){
 	c.HTML(http.StatusOK,"aboultme.html",gin.H{
 		"IsLogin":islogin,
 		"wechat":"微信：xxxx",
-		"QQ":"7094635axx",
+		"QQ":"8294635axx",
 		"tel":"12355545454",
 	})
 }

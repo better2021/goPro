@@ -28,7 +28,7 @@ func AddArticle(article Article)(int64,error){
 
 // 插入一篇文章
 func insertArticle(article Article)(int64,error){
-	return database.ModifyDB("insert into article(title,tags,short,content,author,createtime) values(?,?,?,?,?,?)",
+	return database.ModifyDB("insert into article(title,tags,short,content,author) values(?,?,?,?,?)",
 		article.Title,article.Tags,article.Short,article.Author,article.Createtime)
 }
 
