@@ -38,6 +38,8 @@ func HomeGet(c *gin.Context){
 	homeFooterPageCode := models.ConfigHomeFooterPageCode(page)
 	html := models.MakeHoneBlocks(artList,isLogin)
 
+	fmt.Println(homeFooterPageCode,"+++")
+
 	c.HTML(http.StatusOK,"home.html",gin.H{
 		"IsLogin":isLogin,
 		"Content":html,

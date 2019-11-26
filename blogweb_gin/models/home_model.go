@@ -39,7 +39,7 @@ type TagLink struct {
 type HomeFooterPageCode struct {
 	HasPre bool
 	HasNext bool
-	ShowOage string
+	ShowPage string
 	PreLink string
 	NextLink string
 }
@@ -97,7 +97,7 @@ func ConfigHomeFooterPageCode(page int) HomeFooterPageCode{
 	//从配置文件中读取每页显示的条数
 	//pageRow := config.NUM
 	allPageNum := (num - 1)/config.NUM + 1
-	pageCode.ShowOage = fmt.Sprintf("%d/%d",page,allPageNum)
+	pageCode.ShowPage = fmt.Sprintf("%d/%d",page,allPageNum)
 
 	// 当前页数小于等于1，那么上一页的按钮不能点击
 	if page <= 1{

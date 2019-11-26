@@ -29,7 +29,7 @@ func AddArticle(article Article)(int64,error){
 // 插入一篇文章
 func insertArticle(article Article)(int64,error){
 	return database.ModifyDB("insert into article(title,tags,short,content,author) values(?,?,?,?,?)",
-		article.Title,article.Tags,article.Short,article.Author,article.Createtime)
+		article.Title,article.Tags,article.Short,article.Content,article.Author)
 }
 
 /*
@@ -120,6 +120,7 @@ func QueryArticleWithId(id int) Article {
 	createtime = 0
 	row.Scan(&id,&title,&tags,&short,&content,&author,&createtime)
 	art := Article{id,title,tags,short,content,author,createtime}
+	fmt.Println(art,"++++")
 	return art
 }
 
