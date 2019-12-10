@@ -38,9 +38,10 @@ func Upload(w http.ResponseWriter,r *http.Request){
 		_,err = io.Copy(out,file)
 		if err !=nil{
 			io.WriteString(w,"文件保存失败:"+err.Error())
-		}else {
-			io.WriteString(w,"文件保存成功")
+			return
 		}
+		//io.WriteString(w,"文件保存成功")
+		http.Redirect(w,r,"/image?name="+header.Filename,302) //302临时重定向
 	}
 }
 
@@ -59,11 +60,20 @@ func ImageView(w http.ResponseWriter,r *http.Request){
 	io.Copy(w,f)
 }
 
+// 详细
+func DetailView(w http.ResponseWriter,r *http.Request){
+	r.ParseForm()
+	name := r.Form.Get("name")
+	fmt.Println(name)
+	io.WriteString(w,"图片的名称是："+ name)
+}
+
 func main()  {
 	fmt.Println("hello")
 	http.HandleFunc("/upload",Upload)
 	http.HandleFunc("/index",IndexView)
 	http.HandleFunc("/image",ImageView)
+	http.HandleFunc("/detail",DetailView)
 	fmt.Println("run at 8081")
 	http.ListenAndServe(":8081",nil)
 }
