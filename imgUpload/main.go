@@ -38,6 +38,8 @@ func Upload(w http.ResponseWriter,r *http.Request){
 		_,err = io.Copy(out,file)
 		if err !=nil{
 			io.WriteString(w,"文件保存失败:"+err.Error())
+		}else {
+			io.WriteString(w,"文件保存成功")
 		}
 	}
 }
@@ -47,6 +49,14 @@ func ImageView(w http.ResponseWriter,r *http.Request){
 	r.ParseForm() // 把url 或者 form 表单的数据解析到对应的容器 r.From
 	name := r.Form.Get("name")
 	fmt.Printf("name:%s",name)
+	f,err:= os.Open("./images/" + name)  // 预览地址 http://localhost:8081/image?name=photo_2019-12-07_15-18-37.jpg
+	if err != nil{
+		w.WriteHeader(404)
+		return
+	}
+	defer f.Close()
+	w.Header().Set("Content-Type","image")
+	io.Copy(w,f)
 }
 
 func main()  {
