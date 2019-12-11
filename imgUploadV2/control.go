@@ -1,6 +1,7 @@
 package main
 
 import (
+	"bytes"
 	"fmt"
 	"io"
 	"io/ioutil"
@@ -12,7 +13,6 @@ import (
 )
 
 // 控制器
-
 
 // 首页
 func IndexView(w http.ResponseWriter,r *http.Request){
@@ -28,6 +28,7 @@ func UploadView(w http.ResponseWriter,r *http.Request){
 
 // 图片上传
 func ApiUpload(w http.ResponseWriter, r *http.Request){
+	r.ParseForm()
 	f,h,err := r.FormFile("file")
 	if err !=nil{
 		io.WriteString(w,"上传错误")
@@ -51,6 +52,22 @@ func ApiUpload(w http.ResponseWriter, r *http.Request){
 	io.Copy(out,f)
 	out.Close()
 	f.Close()
+	mod := Info{
+		Name:h.Filename,
+		Path:name,
+		Note:r.Form.Get("note"),
+		CreateTime:time.Now().Unix(),
+	}
+	InfoAdd(&mod)
+}
+
+// 详情页面
+func DetailView(w http.ResponseWriter,r *http.Request){
+	r.ParseForm()
+	url:=r.Form.Get("url")
+	html:= LoadHtml("./view/detail.html")
+	bytes.Replace(html,[]byte("@src"),[]byte(url),1)
+	w.Write(html)
 }
 
 // 加载Html文件

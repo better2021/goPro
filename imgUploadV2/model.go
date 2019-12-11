@@ -1,11 +1,11 @@
 package main
 
 import (
+	"errors"
 	"fmt"
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/jmoiron/sqlx"
 	"log"
-	"time"
 )
 
 type Info struct {
@@ -13,7 +13,7 @@ type Info struct {
 	Name string
 	Path string
 	Note string
-	CreateTime time.Time
+	CreateTime int64
 }
 
 // 定义数据库
@@ -31,4 +31,18 @@ func init(){
 	}
 	fmt.Println("数据库已连接")
 	Db = db
+}
+
+// 添加
+func InfoAdd(mod *Info) error{
+	result,err := Db.Exec("insert into info (name,path,note,createTime) values (?,?,?,?)",mod.Name,mod.Path,mod.Note,mod.CreateTime)
+	fmt.Println(result,err,"---")
+	if err!=nil{
+		return err
+	}
+	id,_ := result.LastInsertId()
+	if id <1 {
+		return errors.New("添加失败")
+	}
+	return nil
 }
