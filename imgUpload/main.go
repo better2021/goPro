@@ -5,12 +5,13 @@ import (
 	"fmt"
 	"io"
 	"io/ioutil"
+	"log"
 	"net/http"
 	"os"
 )
 
 func IndexView(w http.ResponseWriter,r *http.Request){
-	w.Write([]byte("hello"))
+	w.Write([]byte(`<p><a href="/list">列表</a> <a href="/upload">上传</a></p>`))
 }
 
 // 上传
@@ -87,11 +88,29 @@ func loadHtml(name string) []byte{
 	return buf
 }
 
+func ListView(w http.ResponseWriter,r *http.Request){
+	html := loadHtml("./list.html")
+	names,err := ioutil.ReadDir("./images")
+	if err!=nil{
+		w.Write([]byte("erros"))
+		return
+	}
+	temp := ""
+	for i:=0;i<len(names);i++{
+		log.Println(names[i].Name(),err)
+
+		temp += `<li><a href="/detail?name=`+ names[i].Name() +`"><img src="/image?name=`+ names[i].Name() +`" alt="图片"></a></li>`
+	}
+	html = bytes.Replace(html,[]byte("@html"),[]byte(temp),1)
+	w.Write(html)
+}
+
 func main()  {
 	fmt.Println("hello")
+	http.HandleFunc("/",IndexView)
 	http.HandleFunc("/upload",Upload)
-	http.HandleFunc("/index",IndexView)
 	http.HandleFunc("/image",ImageView)
+	http.HandleFunc("/list",ListView)
 	http.HandleFunc("/detail",DetailView)
 	fmt.Println("run at 8081")
 	http.ListenAndServe(":8081",nil)
