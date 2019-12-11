@@ -1,6 +1,7 @@
 package main
 
 import (
+	"bytes"
 	"fmt"
 	"io"
 	"io/ioutil"
@@ -15,10 +16,10 @@ func IndexView(w http.ResponseWriter,r *http.Request){
 // 上传
 func Upload(w http.ResponseWriter,r *http.Request){
 	fmt.Println(r.Method)
-	body,_ := ioutil.ReadFile("./upload.html")
-	// fmt.Println(string(body),"--")
+
 	// GET
 	if r.Method == "GET"{
+		body,_ := ioutil.ReadFile("./upload.html")
 		w.Write([]byte(string(body)))
 		return
 	}
@@ -65,7 +66,25 @@ func DetailView(w http.ResponseWriter,r *http.Request){
 	r.ParseForm()
 	name := r.Form.Get("name")
 	fmt.Println(name)
-	io.WriteString(w,"图片的名称是："+ name)
+	html := loadHtml("./detail.html")
+	html = bytes.Replace(html,[]byte("@src"),[]byte("/image?name="+name),1)
+	w.Write(html)
+
+	//io.WriteString(w,"图片的名称是："+ name)
+}
+
+// 加载html
+func loadHtml(name string) []byte{
+	f,err := os.Open(name)
+	if err != nil{
+		return []byte("error")
+	}
+	defer f.Close()
+	buf,err := ioutil.ReadAll(f)
+	if err !=nil{
+		return []byte("errors")
+	}
+	return buf
 }
 
 func main()  {
