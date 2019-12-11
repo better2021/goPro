@@ -8,6 +8,7 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"strings"
 )
 
 func IndexView(w http.ResponseWriter,r *http.Request){
@@ -30,6 +31,12 @@ func Upload(w http.ResponseWriter,r *http.Request){
 		if err != nil{
 			// 有错误
 			w.Write([]byte("文件上传有误："+err.Error()))
+			return
+		}
+		t := header.Header.Get("Content-Type")
+		fmt.Println(t,"--")
+		if !strings.Contains(t,"image"){
+			io.WriteString(w,"请上传图片")
 			return
 		}
 		os.Mkdir("./images",0666)
