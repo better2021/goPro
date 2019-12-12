@@ -8,6 +8,7 @@ import (
 	"net/http"
 	"os"
 	"path"
+	"strconv"
 	"strings"
 	"time"
 )
@@ -64,9 +65,20 @@ func ApiUpload(w http.ResponseWriter, r *http.Request){
 // 详情页面
 func DetailView(w http.ResponseWriter,r *http.Request){
 	r.ParseForm()
-	url:=r.Form.Get("url")
+	//url:=r.Form.Get("url")
+	idStr := r.Form.Get("id")
+	id,_ := strconv.ParseInt(idStr,10,64)
+
+	var mod Info
+	var err error
+	mod,err= InfoGet(id)
+
+	fmt.Println(id,mod.Path,err,"--")
+	date := time.Unix(mod.CreateTime,0).Format("2006年01月02日 15:04:05")
 	html:= LoadHtml("./view/detail.html")
-	bytes.Replace(html,[]byte("@src"),[]byte(url),1)
+	bytes.Replace(html,[]byte("@src"),[]byte(mod.Path),1)
+	bytes.Replace(html,[]byte("@note"),[]byte(mod.Note),1)
+	bytes.Replace(html,[]byte("@time"),[]byte(date),1)
 	w.Write(html)
 }
 

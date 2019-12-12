@@ -46,3 +46,10 @@ func InfoAdd(mod *Info) error{
 	}
 	return nil
 }
+
+//  InfoGet查询某个条件
+func InfoGet(id int64) (Info,error){
+	mod := Info{}
+	err := Db.Get(&mod,"select * from info where id = ?",id)
+	return mod,err
+}
