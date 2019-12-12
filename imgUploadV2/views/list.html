@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>列表</title>
+    <style>
+        ul,li{
+            list-style: none;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <ul id="box">
+            <!--<li><a href=""><img src="" alt=""></a></li>-->
+        </ul>
+    </div>
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.4.0/jquery.js"></script>
+<script>
+    function init() {
+        $.get("/api/list",{},function (res) {
+            console.log(res);
+            let html = [];
+            for(let i=0;i<res.length;i++){
+                html.push(`<li><a href="/detail?id=${res[i].id}"><img src="/static/${res[i].path}" alt="图片"></a>
+                <button onclick="deleteItem(${res[i].id})">删除</button>
+</li>`);
+                document.getElementById("box").innerHTML = html.join("");
+            }
+        },"json")
+    }
+    init()
+
+    // 删除
+    function deleteItem(id) {
+        $.get("/api/delete",{id:id},function(res){
+            if (res=="删除成功"){
+                init()
+            }else {
+                alert("删除失败")
+            }
+        })
+    }
+</script>
+</html>

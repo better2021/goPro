@@ -9,11 +9,11 @@ import (
 )
 
 type Info struct {
-	Id int64
-	Name string
-	Path string
-	Note string
-	CreateTime int64
+	Id int64 `json:"id" db:"id"`
+	Name string `json:"name" db:"name"`
+	Path string `json:"path" db:"path"`
+	Note string	`json:"note" db:"note"`
+	CreateTime int64 `json:"create_time" db:"createTime"`
 }
 
 // 定义数据库
@@ -47,9 +47,23 @@ func InfoAdd(mod *Info) error{
 	return nil
 }
 
+// 删除
+func InfoDelete(id int64) error{
+	result,err := Db.Exec("delete from info where id = ?",id)
+	if err !=nil{
+		return err
+	}
+	rows,_:=result.RowsAffected()
+	if rows!=1{
+		return errors.New("删除失败")
+	}
+	return nil
+}
+
 //  InfoGet查询某个条件
 func InfoGet(id int64) (Info,error){
 	mod := Info{}
 	err := Db.Get(&mod,"select * from info where id = ?",id)
 	return mod,err
 }
+
