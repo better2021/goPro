@@ -78,9 +78,9 @@ func DetailView(w http.ResponseWriter,r *http.Request){
 	date := time.Unix(mod.CreateTime,0).Format("2006年01月02日 15:04:05")
 
 	html:= LoadHtml("./views/detail.html")
-	bytes.Replace(html,[]byte("@src"),[]byte(mod.Path),1)
-	bytes.Replace(html,[]byte("@note"),[]byte(mod.Note),1)
-	bytes.Replace(html,[]byte("@time"),[]byte(date),1)
+	html = bytes.Replace(html,[]byte("@src"),[]byte("/static/"+mod.Path),1)
+	html = bytes.Replace(html,[]byte("@note"),[]byte(mod.Note),1)
+	html = bytes.Replace(html,[]byte("@time"),[]byte(date),1) // 找到detail.html文件中的@time替换为date变量的值
 	w.Write(html)
 }
 
