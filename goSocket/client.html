@@ -6,6 +6,7 @@
         window.addEventListener("load", function(evt) {
             var output = document.getElementById("output");
             var input = document.getElementById("input");
+            var file = document.getElementById("file");
             var ws;
             var print = function(message) {
                 var d = document.createElement("div");
@@ -14,9 +15,6 @@
             };
 
             document.getElementById("open").onclick = function(evt) {
-                if (ws) {
-                    return false;
-                }
                 ws = new WebSocket("ws://localhost:8080/ws");
                 ws.onopen = function (evt) {
                     print("open")
@@ -35,17 +33,14 @@
                 return false;
             };
             document.getElementById("send").onclick = function(evt) {
-                if (!ws) {
-                    return false;
-                }
+                console.log(ws,"--");
                 print("SEND: " + input.value);
+                console.log(file.value,"**");
                 ws.send(input.value);
+                ws.send(file.value);
                 return false;
             };
             document.getElementById("close").onclick = function(evt) {
-                if (!ws) {
-                    return false;
-                }
                ws.clone();
                 return false;
             };
@@ -63,6 +58,7 @@
                 <button id="open">Open</button>
                 <button id="close">Close</button>
                 <input id="input" type="text" value="Hello world!">
+                <input id="file" type="file">
                 <button id="send">Send</button>
             </form>
         </td><td valign="top" width="50%">
