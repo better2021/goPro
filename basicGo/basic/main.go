@@ -25,6 +25,7 @@ func main(){
 	// study.Two()
 	// study.Three()
 	// study.Four()
-	study.Five()
+	//study.Five()
+	study.Six()
 }
 
