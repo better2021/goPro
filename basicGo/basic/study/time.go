@@ -80,4 +80,18 @@ func stamTime(){
 	p := Person{ "lisi", 13}
 	fmt.Println(reflect.TypeOf(p).Name())
 	fmt.Println(reflect.TypeOf(p).Kind())
+
+	str := p
+	fmt.Println(reflect.TypeOf(str).Name())
+
+	switch reflect.TypeOf(str).Name() {
+		case "string":
+			fmt.Println("字符串")
+		case "int":
+			fmt.Println("数字")
+		case "bool":
+			fmt.Println("布尔值")
+		default:
+			fmt.Println("其他类型")
+		}
 }
