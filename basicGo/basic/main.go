@@ -28,6 +28,7 @@ func main(){
 	// study.Five()
 	// study.Six()
 	// study.Time()
-	study.Seven()
+	// study.Seven()
+	study.Chan()
 }
 
