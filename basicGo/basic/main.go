@@ -2,7 +2,7 @@ package main
 
 import "basicGo/basic/study"
 
-func main(){
+func main() {
 	// lesson.One()
 	//lesson.Two()
 	//lesson.Three()
@@ -20,7 +20,6 @@ func main(){
 	// lesson.Time()
 	// lesson.Face()
 
-
 	// study.One()
 	// study.Two()
 	// study.Three()
@@ -30,6 +29,6 @@ func main(){
 	// study.Time()
 	// study.Seven()
 	// study.Chan()
-	study.Sync()
+	// study.Sync()
+	study.Web()
 }
-
