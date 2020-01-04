@@ -59,8 +59,14 @@ func helloworld(w http.ResponseWriter,r *http.Request)  {
 	fmt.Println(runtime.GOROOT())
 	fmt.Println(runtime.Gosched)
 
-	str := `string`
-	fmt.Println(str)
+	str := `string我爱学习`
+	fmt.Println(str,len(str))
+	// rune 等同于int32,常用来处理unicode或utf-8字符
+	rr := []rune(str)
+	fmt.Println(rr)
+	for i:=0;i<len(rr);i++{
+		fmt.Printf("%c \n",rr[i])
+	}
 }
 
 // 利用cookie方式创建session，秘钥为 mykey
