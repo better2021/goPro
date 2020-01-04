@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"github.com/gorilla/sessions"
 	"net/http"
+	"runtime"
 )
 
 func Web(){
@@ -50,6 +51,16 @@ func helloworld(w http.ResponseWriter,r *http.Request)  {
 	fmt.Println("path",r.URL.Path)
 	fmt.Println(r.Form)
 	fmt.Fprint(w,"hello")
+
+	fmt.Println("cpu核数",runtime.NumCPU())
+	fmt.Println(runtime.GOMAXPROCS(0))
+	fmt.Println(runtime.GOOS)
+	fmt.Println(runtime.GOARCH)
+	fmt.Println(runtime.GOROOT())
+	fmt.Println(runtime.Gosched)
+
+	str := `string`
+	fmt.Println(str)
 }
 
 // 利用cookie方式创建session，秘钥为 mykey
