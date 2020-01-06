@@ -1,6 +1,7 @@
 package ginStudy
 
 import (
+	"basicGo/basic/gin/middleware"
 	"fmt"
 	"github.com/gin-gonic/gin"
 	"net/http"
@@ -8,8 +9,8 @@ import (
 
 func Lession01(){
 	r := gin.Default()
-
-	r.GET("/", func(c *gin.Context) {
+	// 在路由函数中使用中间件
+	r.GET("/",middleware.Mymid() ,func(c *gin.Context) {
 		username := c.Query("username")
 		fmt.Println(username)
 
@@ -19,3 +20,4 @@ func Lession01(){
 	})
 	r.Run(":80")
 }
+

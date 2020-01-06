@@ -1,6 +1,7 @@
 package ginStudy
 
 import (
+	"basicGo/basic/gin/middleware"
 	"fmt"
 	"github.com/gin-gonic/gin"
 	"net/http"
@@ -31,8 +32,34 @@ func login(c *gin.Context){
 	})
 }
 
+// 文件上传
+func upload(c *gin.Context){
+	file,err := c.FormFile("file")
+	if err !=nil{
+		c.JSON(http.StatusInternalServerError,gin.H{
+			"msg":err.Error(),
+		})
+		return
+	}
+	fmt.Println(file.Filename)
+	dist := "./gin/static/"+file.Filename // 文件上传后保存的地址（相对地址）
+	errs := c.SaveUploadedFile(file,dist)
+	if errs!=nil{
+		fmt.Println(errs)
+	}
+	c.JSON(http.StatusOK,gin.H{
+		"msg":"ok",
+	})
+}
+
 func Lession02(){
 	router := gin.Default()
+	// 全局中间件
+	router.Use(middleware.Mymid())
+	
 	router.POST("/login",login)
+	router.POST("/upload",upload)
+	http.Handle("/static/",http.StripPrefix("/static/",http.FileServer(http.Dir("static/"))))
+	//router.Static("/static","./static")
 	router.Run(":3000")
 }

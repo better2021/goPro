@@ -32,6 +32,6 @@ func main() {
 	// study.Sync()
 	// study.Web()
 
-	//ginStudy.Lession01()
+	// ginStudy.Lession01()
 	ginStudy.Lession02()
 }
