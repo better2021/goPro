@@ -56,7 +56,7 @@ func Lession02(){
 	router := gin.Default()
 	// 全局中间件
 	router.Use(middleware.Mymid())
-	
+
 	router.POST("/login",login)
 	router.POST("/upload",upload)
 	http.Handle("/static/",http.StripPrefix("/static/",http.FileServer(http.Dir("static/"))))
