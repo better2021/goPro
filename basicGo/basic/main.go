@@ -1,6 +1,6 @@
 package main
 
-import "basicGo/basic/study"
+import "basicGo/basic/gin"
 
 func main() {
 	// lesson.One()
@@ -30,5 +30,8 @@ func main() {
 	// study.Seven()
 	// study.Chan()
 	// study.Sync()
-	study.Web()
+	// study.Web()
+
+	//ginStudy.Lession01()
+	ginStudy.Lession02()
 }
