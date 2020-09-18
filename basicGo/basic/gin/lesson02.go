@@ -14,7 +14,6 @@ type User struct {
 
 func login(c *gin.Context){
 	var user User
-
 	fmt.Println(c.PostForm("username"))
 	fmt.Println(c.PostForm("password"))
 

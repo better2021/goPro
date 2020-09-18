@@ -13,7 +13,7 @@ func Lession01(){
 	r.GET("/",middleware.Mymid() ,func(c *gin.Context) {
 		username := c.Query("username")
 		fmt.Println(username)
-
+		
 		c.JSON(http.StatusOK, gin.H {
 			"msg":"hello "+username,
 		})
