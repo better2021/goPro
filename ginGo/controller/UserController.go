@@ -42,10 +42,16 @@ func isRight(telephone string,password string,ctx *gin.Context) bool{
 // 用户注册
 func Register(ctx *gin.Context) {
 	DB := common.GetDB()
+	var requestUser = model.User{}
+	err := ctx.Bind(&requestUser)
+	if err !=nil{
+		response.Fail(ctx,err.Error(),nil)
+		return
+	}
 	// 获取参数
-	name := ctx.PostForm("name")
-	telephone := ctx.PostForm("telephone")
-	password := ctx.PostForm("password")
+	name := requestUser.Name
+	telephone := requestUser.Telephone
+	password := requestUser.Password
 	// 数据验证
 	isReturn := isRight(telephone,password,ctx)
 	if !isReturn{

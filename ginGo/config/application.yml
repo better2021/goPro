@@ -9,3 +9,4 @@ datasource:
   username: root
   password: 709463253
   charset: utf8
+  loc: Asia/Shanghai
