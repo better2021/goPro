@@ -8,7 +8,7 @@ import (
 )
 
 func CollectRouter(r *gin.Engine) *gin.Engine {
-	r.Use(middleware.CorsMiddleware()) // 使用跨域中间件
+	r.Use(middleware.CorsMiddleware(),middleware.RecoveryMiddleware()) // 使用跨域中间件 和 cover()中间件
 	r.POST("/api/auth/register", controller.Register)
 	r.POST("/api/auth/login",controller.Login)
 	r.POST("api/auth/info",middleware.AuthMiddleware(), controller.Info)
@@ -19,6 +19,16 @@ func CollectRouter(r *gin.Engine) *gin.Engine {
 	categoryRoutes.PUT("/:id",categoryController.Update)
 	categoryRoutes.GET("",categoryController.Search)
 	categoryRoutes.DELETE("/:id",categoryController.Delete)
+
+	postRoutes := r.Group("/posts")
+	postRoutes.Use(middleware.AuthMiddleware())
+	postController := controller.NewPostController()
+	postRoutes.POST("",postController.Create)
+	postRoutes.PUT("/:id",postController.Update)
+	postRoutes.GET("",postController.Search)
+	postRoutes.DELETE("/:id",postController.Delete)
+
+	postRoutes.GET("/page/list",postController.PageList)
 
 	return r
 }

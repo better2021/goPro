@@ -11,6 +11,7 @@ require (
 	github.com/jinzhu/now v1.1.1 // indirect
 	github.com/json-iterator/go v1.1.10 // indirect
 	github.com/mattn/go-sqlite3 v2.0.3+incompatible // indirect
+	github.com/satori/go.uuid v1.2.0
 	github.com/spf13/viper v1.7.1
 	github.com/ugorji/go v1.1.8 // indirect
 	golang.org/x/crypto v0.0.0-20191205180655-e7c4368fe9dd

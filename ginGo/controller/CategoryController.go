@@ -5,6 +5,7 @@ import (
 	"ginGo/common"
 	"ginGo/model"
 	"ginGo/response"
+	"ginGo/vo"
 	"github.com/gin-gonic/gin"
 	"github.com/jinzhu/gorm"
 	"strconv"
@@ -27,15 +28,15 @@ func NewCategoryController() ICategoryController {
 
 // 创建
 func (c CategoryController) Create(ctx *gin.Context) {
-	var requestCategory model.Category
-	ctx.Bind(&requestCategory)
-
-	if requestCategory.Name == ""{
+	var requestCategory vo.CreateCategoryRequest
+	if err := ctx.ShouldBind(&requestCategory);err != nil{
 		response.Fail(ctx,"分类名称必填",nil)
 		return
 	}
 
-	c.DB.Create(&requestCategory)
+	category := model.Category{Name:requestCategory.Name}
+	c.DB.Create(&category)
+
 	response.Success(ctx,gin.H{"data":requestCategory},"")
 }
 
