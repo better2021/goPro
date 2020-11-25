@@ -1,7 +1,7 @@
 package ginStudy
 
 import (
-	"basicGo/basic/gin/middleware"
+	"basic/gin/middleware"
 	"fmt"
 	"github.com/gin-gonic/gin"
 	"net/http"

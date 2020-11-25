@@ -2,13 +2,230 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6580eacd-9638-49e4-aa7a-992fea5c6d93" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/goSqlx.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/goSqlx.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/channel/channel.go" beforeDir="false" afterPath="$PROJECT_DIR$/basic/channel/channel.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/basic/gin/lesson01.go" beforeDir="false" afterPath="$PROJECT_DIR$/basic/gin/lesson01.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/basic/gin/lesson02.go" beforeDir="false" afterPath="$PROJECT_DIR$/basic/gin/lesson02.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/gin/middleware/middleware.go" beforeDir="false" afterPath="$PROJECT_DIR$/basic/gin/middleware/middleware.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/gin/static/需求1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/basic/gin/static/需求1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/goroutine/gorouting.go" beforeDir="false" afterPath="$PROJECT_DIR$/basic/goroutine/gorouting.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/interface/interface.go" beforeDir="false" afterPath="$PROJECT_DIR$/basic/interface/interface.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/io/io.go" beforeDir="false" afterPath="$PROJECT_DIR$/basic/io/io.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/lesson/Seven.go" beforeDir="false" afterPath="$PROJECT_DIR$/basic/lesson/Seven.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/lesson/chan.go" beforeDir="false" afterPath="$PROJECT_DIR$/basic/lesson/chan.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/lesson/channel.go" beforeDir="false" afterPath="$PROJECT_DIR$/basic/lesson/channel.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/lesson/eight.go" beforeDir="false" afterPath="$PROJECT_DIR$/basic/lesson/eight.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/lesson/file/aa.txt" beforeDir="false" afterPath="$PROJECT_DIR$/basic/lesson/file/aa.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/lesson/five.go" beforeDir="false" afterPath="$PROJECT_DIR$/basic/lesson/five.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/lesson/four.go" beforeDir="false" afterPath="$PROJECT_DIR$/basic/lesson/four.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/lesson/inter.go" beforeDir="false" afterPath="$PROJECT_DIR$/basic/lesson/inter.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/lesson/interface.go" beforeDir="false" afterPath="$PROJECT_DIR$/basic/lesson/interface.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/lesson/nine.go" beforeDir="false" afterPath="$PROJECT_DIR$/basic/lesson/nine.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/lesson/one.go" beforeDir="false" afterPath="$PROJECT_DIR$/basic/lesson/one.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/lesson/select.go" beforeDir="false" afterPath="$PROJECT_DIR$/basic/lesson/select.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/lesson/six.go" beforeDir="false" afterPath="$PROJECT_DIR$/basic/lesson/six.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/lesson/ten.go" beforeDir="false" afterPath="$PROJECT_DIR$/basic/lesson/ten.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/lesson/three.go" beforeDir="false" afterPath="$PROJECT_DIR$/basic/lesson/three.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/lesson/time.go" beforeDir="false" afterPath="$PROJECT_DIR$/basic/lesson/time.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/lesson/two.go" beforeDir="false" afterPath="$PROJECT_DIR$/basic/lesson/two.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/basic/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/reflect/reflect.go" beforeDir="false" afterPath="$PROJECT_DIR$/basic/reflect/reflect.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/reflect/tmp/runner-build-errors.log" beforeDir="false" afterPath="$PROJECT_DIR$/basic/reflect/tmp/runner-build-errors.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/socket/client/client.go" beforeDir="false" afterPath="$PROJECT_DIR$/basic/socket/client/client.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/socket/server/socket.go" beforeDir="false" afterPath="$PROJECT_DIR$/basic/socket/server/socket.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/struct/struct.go" beforeDir="false" afterPath="$PROJECT_DIR$/basic/struct/struct.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/study/channel.go" beforeDir="false" afterPath="$PROJECT_DIR$/basic/study/channel.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/study/five.go" beforeDir="false" afterPath="$PROJECT_DIR$/basic/study/five.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/study/four.go" beforeDir="false" afterPath="$PROJECT_DIR$/basic/study/four.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/study/goroutine.go" beforeDir="false" afterPath="$PROJECT_DIR$/basic/study/goroutine.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/study/one.go" beforeDir="false" afterPath="$PROJECT_DIR$/basic/study/one.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/study/six.go" beforeDir="false" afterPath="$PROJECT_DIR$/basic/study/six.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/study/sync.go" beforeDir="false" afterPath="$PROJECT_DIR$/basic/study/sync.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/study/three.go" beforeDir="false" afterPath="$PROJECT_DIR$/basic/study/three.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/study/time.go" beforeDir="false" afterPath="$PROJECT_DIR$/basic/study/time.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/study/two.go" beforeDir="false" afterPath="$PROJECT_DIR$/basic/study/two.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/study/web.go" beforeDir="false" afterPath="$PROJECT_DIR$/basic/study/web.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/time/time.go" beforeDir="false" afterPath="$PROJECT_DIR$/basic/time/time.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/udp/client/client.go" beforeDir="false" afterPath="$PROJECT_DIR$/basic/udp/client/client.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/udp/server/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/basic/udp/server/server.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/dbConfig.go" beforeDir="false" afterPath="$PROJECT_DIR$/config/dbConfig.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/control/classification.go" beforeDir="false" afterPath="$PROJECT_DIR$/control/classification.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/control/product.go" beforeDir="false" afterPath="$PROJECT_DIR$/control/product.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/control/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/control/user.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/product.go" beforeDir="false" afterPath="$PROJECT_DIR$/model/product.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/model/user.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blogweb_gin/config/conf.go" beforeDir="false" afterPath="$PROJECT_DIR$/../blogweb_gin/config/conf.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blogweb_gin/controllers/aboutme_controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/../blogweb_gin/controllers/aboutme_controller.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blogweb_gin/controllers/add_article_controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/../blogweb_gin/controllers/add_article_controller.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blogweb_gin/controllers/album_controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/../blogweb_gin/controllers/album_controller.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blogweb_gin/controllers/delete_article_controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/../blogweb_gin/controllers/delete_article_controller.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blogweb_gin/controllers/exit_controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/../blogweb_gin/controllers/exit_controller.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blogweb_gin/controllers/home_controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/../blogweb_gin/controllers/home_controller.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blogweb_gin/controllers/login_controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/../blogweb_gin/controllers/login_controller.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blogweb_gin/controllers/register_controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/../blogweb_gin/controllers/register_controller.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blogweb_gin/controllers/session_controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/../blogweb_gin/controllers/session_controller.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blogweb_gin/controllers/show_article_controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/../blogweb_gin/controllers/show_article_controller.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blogweb_gin/controllers/tags_controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/../blogweb_gin/controllers/tags_controller.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blogweb_gin/controllers/update_article_controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/../blogweb_gin/controllers/update_article_controller.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blogweb_gin/controllers/upload_controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/../blogweb_gin/controllers/upload_controller.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blogweb_gin/database/mysql.go" beforeDir="false" afterPath="$PROJECT_DIR$/../blogweb_gin/database/mysql.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blogweb_gin/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/../blogweb_gin/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blogweb_gin/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/../blogweb_gin/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blogweb_gin/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/../blogweb_gin/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blogweb_gin/models/album_model.go" beforeDir="false" afterPath="$PROJECT_DIR$/../blogweb_gin/models/album_model.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blogweb_gin/models/article_model.go" beforeDir="false" afterPath="$PROJECT_DIR$/../blogweb_gin/models/article_model.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blogweb_gin/models/home_model.go" beforeDir="false" afterPath="$PROJECT_DIR$/../blogweb_gin/models/home_model.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blogweb_gin/models/tags_model.go" beforeDir="false" afterPath="$PROJECT_DIR$/../blogweb_gin/models/tags_model.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../blogweb_gin/models/user_model.go" beforeDir="false" afterPath="$PROJECT_DIR$/../blogweb_gin/models/user_model.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blogweb_gin/routers/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/../blogweb_gin/routers/router.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blogweb_gin/static/css/blogsheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/../blogweb_gin/static/css/blogsheet.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blogweb_gin/static/css/lib/highlight.css" beforeDir="false" afterPath="$PROJECT_DIR$/../blogweb_gin/static/css/lib/highlight.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blogweb_gin/static/css/lib/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/../blogweb_gin/static/css/lib/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blogweb_gin/static/js/blog.js" beforeDir="false" afterPath="$PROJECT_DIR$/../blogweb_gin/static/js/blog.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blogweb_gin/static/js/lib/jquery-3.3.1.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/../blogweb_gin/static/js/lib/jquery-3.3.1.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blogweb_gin/static/js/lib/jquery.url.js" beforeDir="false" afterPath="$PROJECT_DIR$/../blogweb_gin/static/js/lib/jquery.url.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blogweb_gin/utils/myUtils.go" beforeDir="false" afterPath="$PROJECT_DIR$/../blogweb_gin/utils/myUtils.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blogweb_gin/views/aboultme.html" beforeDir="false" afterPath="$PROJECT_DIR$/../blogweb_gin/views/aboultme.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blogweb_gin/views/album.html" beforeDir="false" afterPath="$PROJECT_DIR$/../blogweb_gin/views/album.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blogweb_gin/views/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/../blogweb_gin/views/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blogweb_gin/views/home_block.html" beforeDir="false" afterPath="$PROJECT_DIR$/../blogweb_gin/views/home_block.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blogweb_gin/views/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/../blogweb_gin/views/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blogweb_gin/views/nav.html" beforeDir="false" afterPath="$PROJECT_DIR$/../blogweb_gin/views/nav.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blogweb_gin/views/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/../blogweb_gin/views/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blogweb_gin/views/show_article.html" beforeDir="false" afterPath="$PROJECT_DIR$/../blogweb_gin/views/show_article.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blogweb_gin/views/tags.html" beforeDir="false" afterPath="$PROJECT_DIR$/../blogweb_gin/views/tags.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blogweb_gin/views/write_article.html" beforeDir="false" afterPath="$PROJECT_DIR$/../blogweb_gin/views/write_article.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ginGo/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../ginGo/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ginGo/.idea/ginGo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../ginGo/.idea/ginGo.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ginGo/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ginGo/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ginGo/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ginGo/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ginGo/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ginGo/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ginGo/.vscode/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/../ginGo/.vscode/settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ginGo/common/database.go" beforeDir="false" afterPath="$PROJECT_DIR$/../ginGo/common/database.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ginGo/common/jwt.go" beforeDir="false" afterPath="$PROJECT_DIR$/../ginGo/common/jwt.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ginGo/config/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../ginGo/config/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ginGo/controller/CategoryController.go" beforeDir="false" afterPath="$PROJECT_DIR$/../ginGo/controller/CategoryController.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ginGo/controller/PostController.go" beforeDir="false" afterPath="$PROJECT_DIR$/../ginGo/controller/PostController.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ginGo/controller/RestController.go" beforeDir="false" afterPath="$PROJECT_DIR$/../ginGo/controller/RestController.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ginGo/controller/UserController.go" beforeDir="false" afterPath="$PROJECT_DIR$/../ginGo/controller/UserController.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ginGo/dto/user_dto.go" beforeDir="false" afterPath="$PROJECT_DIR$/../ginGo/dto/user_dto.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ginGo/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/../ginGo/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ginGo/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/../ginGo/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ginGo/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/../ginGo/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ginGo/middleware/AuthMiddleware.go" beforeDir="false" afterPath="$PROJECT_DIR$/../ginGo/middleware/AuthMiddleware.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ginGo/middleware/CorsMiddleware.go" beforeDir="false" afterPath="$PROJECT_DIR$/../ginGo/middleware/CorsMiddleware.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ginGo/middleware/RecoveryMiddleware.go" beforeDir="false" afterPath="$PROJECT_DIR$/../ginGo/middleware/RecoveryMiddleware.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ginGo/model/Category.go" beforeDir="false" afterPath="$PROJECT_DIR$/../ginGo/model/Category.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ginGo/model/post.go" beforeDir="false" afterPath="$PROJECT_DIR$/../ginGo/model/post.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ginGo/model/time.go" beforeDir="false" afterPath="$PROJECT_DIR$/../ginGo/model/time.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ginGo/model/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/../ginGo/model/user.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ginGo/response/response.go" beforeDir="false" afterPath="$PROJECT_DIR$/../ginGo/response/response.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ginGo/route/routes.go" beforeDir="false" afterPath="$PROJECT_DIR$/../ginGo/route/routes.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ginGo/util/util.go" beforeDir="false" afterPath="$PROJECT_DIR$/../ginGo/util/util.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ginGo/vo/categroy_request.go" beforeDir="false" afterPath="$PROJECT_DIR$/../ginGo/vo/categroy_request.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ginGo/vo/post.go" beforeDir="false" afterPath="$PROJECT_DIR$/../ginGo/vo/post.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ginWeb/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../ginWeb/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ginWeb/.idea/ginWeb.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../ginWeb/.idea/ginWeb.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ginWeb/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ginWeb/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ginWeb/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ginWeb/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ginWeb/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ginWeb/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ginWeb/.vscode/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/../ginWeb/.vscode/settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ginWeb/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/../ginWeb/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ginWeb/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/../ginWeb/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ginWeb/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../ginWeb/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ginWeb/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/../ginWeb/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ginWeb/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/../ginWeb/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../goRedis/config/redis.go" beforeDir="false" afterPath="$PROJECT_DIR$/../goRedis/config/redis.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../goRedis/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/../goRedis/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../goRedis/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/../goRedis/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../goRedis/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/../goRedis/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../goSocket/client.html" beforeDir="false" afterPath="$PROJECT_DIR$/../goSocket/client.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../goSocket/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/../goSocket/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../goSocket/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/../goSocket/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../goSocket/impl/connection.go" beforeDir="false" afterPath="$PROJECT_DIR$/../goSocket/impl/connection.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../goSocket/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/../goSocket/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../imgUpload/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/../imgUpload/detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../imgUpload/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/../imgUpload/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../imgUpload/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../imgUpload/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../imgUpload/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/../imgUpload/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../imgUpload/upload.html" beforeDir="false" afterPath="$PROJECT_DIR$/../imgUpload/upload.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../imgUploadV2/control.go" beforeDir="false" afterPath="$PROJECT_DIR$/../imgUploadV2/control.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../imgUploadV2/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/../imgUploadV2/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../imgUploadV2/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/../imgUploadV2/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../imgUploadV2/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/../imgUploadV2/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../imgUploadV2/model.go" beforeDir="false" afterPath="$PROJECT_DIR$/../imgUploadV2/model.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../imgUploadV2/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/../imgUploadV2/router.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../imgUploadV2/views/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/../imgUploadV2/views/detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../imgUploadV2/views/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../imgUploadV2/views/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../imgUploadV2/views/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../imgUploadV2/views/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../imgUploadV2/views/upload.html" beforeDir="false" afterPath="$PROJECT_DIR$/../imgUploadV2/views/upload.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../learnGin/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/../learnGin/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../learnGin/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/../learnGin/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../learnGin/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/../learnGin/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../learnGin/static/hello.html" beforeDir="false" afterPath="$PROJECT_DIR$/../learnGin/static/hello.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../learnGin/tmp/runner-build-errors.log" beforeDir="false" afterPath="$PROJECT_DIR$/../learnGin/tmp/runner-build-errors.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../logger/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/../logger/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../logger/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/../logger/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../service/account/handler/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/../service/account/handler/user.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../service/account/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/../service/account/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../service/account/proto/user.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../service/account/proto/user.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spider/baidu/baiduSpider.go" beforeDir="false" afterPath="$PROJECT_DIR$/../spider/baidu/baiduSpider.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spider/baidu/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/../spider/baidu/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spider/baidu/第1页.html" beforeDir="false" afterPath="$PROJECT_DIR$/../spider/baidu/第1页.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spider/baidu/第2页.html" beforeDir="false" afterPath="$PROJECT_DIR$/../spider/baidu/第2页.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spider/baidu/第3页.html" beforeDir="false" afterPath="$PROJECT_DIR$/../spider/baidu/第3页.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spider/baidu/第4页.html" beforeDir="false" afterPath="$PROJECT_DIR$/../spider/baidu/第4页.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spider/baidu/第5页.html" beforeDir="false" afterPath="$PROJECT_DIR$/../spider/baidu/第5页.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spider/douban/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/../spider/douban/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spider/douban/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/../spider/douban/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spider/douban/第1页.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../spider/douban/第1页.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spider/douban/第2页.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../spider/douban/第2页.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spider/douban/第3页.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../spider/douban/第3页.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spider/douban/第4页.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../spider/douban/第4页.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spider/douban/第5页.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../spider/douban/第5页.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spider/douyu/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/../spider/douyu/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spider/douyu/img/16.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../spider/douyu/img/16.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spider/douyu/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/../spider/douyu/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../videoServer/api/auth.go" beforeDir="false" afterPath="$PROJECT_DIR$/../videoServer/api/auth.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../videoServer/api/dbops/api.go" beforeDir="false" afterPath="$PROJECT_DIR$/../videoServer/api/dbops/api.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../videoServer/api/dbops/api_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/../videoServer/api/dbops/api_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../videoServer/api/dbops/conn.go" beforeDir="false" afterPath="$PROJECT_DIR$/../videoServer/api/dbops/conn.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../videoServer/api/dbops/internal.go" beforeDir="false" afterPath="$PROJECT_DIR$/../videoServer/api/dbops/internal.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../videoServer/api/defs/apidef.go" beforeDir="false" afterPath="$PROJECT_DIR$/../videoServer/api/defs/apidef.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../videoServer/api/defs/errs.go" beforeDir="false" afterPath="$PROJECT_DIR$/../videoServer/api/defs/errs.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../videoServer/api/handlers.go" beforeDir="false" afterPath="$PROJECT_DIR$/../videoServer/api/handlers.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../videoServer/api/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/../videoServer/api/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../videoServer/api/response.go" beforeDir="false" afterPath="$PROJECT_DIR$/../videoServer/api/response.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../videoServer/api/session/session.go" beforeDir="false" afterPath="$PROJECT_DIR$/../videoServer/api/session/session.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../videoServer/api/utils/uuid.go" beforeDir="false" afterPath="$PROJECT_DIR$/../videoServer/api/utils/uuid.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../videoServer/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/../videoServer/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../videoServer/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/../videoServer/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../videoServer/scheduler/dbops/api.go" beforeDir="false" afterPath="$PROJECT_DIR$/../videoServer/scheduler/dbops/api.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../videoServer/scheduler/dbops/conn.go" beforeDir="false" afterPath="$PROJECT_DIR$/../videoServer/scheduler/dbops/conn.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../videoServer/scheduler/dbops/internal.go" beforeDir="false" afterPath="$PROJECT_DIR$/../videoServer/scheduler/dbops/internal.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../videoServer/scheduler/handlers.go" beforeDir="false" afterPath="$PROJECT_DIR$/../videoServer/scheduler/handlers.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../videoServer/scheduler/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/../videoServer/scheduler/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../videoServer/scheduler/response.go" beforeDir="false" afterPath="$PROJECT_DIR$/../videoServer/scheduler/response.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../videoServer/scheduler/taskrunner/defs.go" beforeDir="false" afterPath="$PROJECT_DIR$/../videoServer/scheduler/taskrunner/defs.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../videoServer/scheduler/taskrunner/runner.go" beforeDir="false" afterPath="$PROJECT_DIR$/../videoServer/scheduler/taskrunner/runner.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../videoServer/scheduler/taskrunner/task.go" beforeDir="false" afterPath="$PROJECT_DIR$/../videoServer/scheduler/taskrunner/task.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../videoServer/scheduler/taskrunner/trmain.go" beforeDir="false" afterPath="$PROJECT_DIR$/../videoServer/scheduler/taskrunner/trmain.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../videoServer/streamserver/defs.go" beforeDir="false" afterPath="$PROJECT_DIR$/../videoServer/streamserver/defs.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../videoServer/streamserver/handlers.go" beforeDir="false" afterPath="$PROJECT_DIR$/../videoServer/streamserver/handlers.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../videoServer/streamserver/limiter.go" beforeDir="false" afterPath="$PROJECT_DIR$/../videoServer/streamserver/limiter.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../videoServer/streamserver/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/../videoServer/streamserver/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../videoServer/streamserver/response.go" beforeDir="false" afterPath="$PROJECT_DIR$/../videoServer/streamserver/response.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../videoServer/streamserver/tmp/runner-build-errors.log" beforeDir="false" afterPath="$PROJECT_DIR$/../videoServer/streamserver/tmp/runner-build-errors.log" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,7 +238,7 @@
       </list>
     </option>
   </component>
-  <component name="GOROOT" path="C:\Users\feiyu\go\go1.13beta1" />
+  <component name="GOROOT" path="C:\Go" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
@@ -29,8 +246,13 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="ask.go.tool.to.install.GoGolangCILintTaskConsumer" value="true" />
@@ -40,7 +262,7 @@
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../go-common" />
+    <property name="last_opened_file_path" value="$USER_HOME$" />
     <property name="settings.editor.selected.configurable" value="go.vgo" />
   </component>
   <component name="RecentsManager">
@@ -50,36 +272,35 @@
       <recent name="E:\study\goStudy\basciGo\basic\socket\server" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
+    <environment>
+      <map>
+        <entry key="GOPROXY" value="off" />
+      </map>
+    </environment>
     <proxy>off</proxy>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="511" y="322" key="#GOROOT" timestamp="1606281318300">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="511" y="322" key="#GOROOT/0.0.1536.824/-3840.-435.2560.1400@0.0.1536.824" timestamp="1606281318300" />
   </component>
 </project>
